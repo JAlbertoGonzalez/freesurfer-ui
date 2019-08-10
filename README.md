@@ -67,3 +67,57 @@ nano /usr/local/freesurfer/.license
 
 (You can save and exit with nano editor pressing Control+O, type yes, and then Control+X)
 
+Environment
+-
+
+Freesurfer only works on TCSH shell. By default, linux systems comes with a bash shell. Freesurfer scripts won't work on bash.
+
+* Install tcsh shell
+
+```
+sudo apt install tcsh
+```
+
+* Open the tcsh shell
+
+```
+tcsh
+```
+
+* Set the environment variables
+
+```
+setenv FREESURFER_HOME /usr/local/freesurfer
+source $FREESURFER_HOME/SetUpFreeSurfer.csh
+```
+
+Now you will have all the freesurfer commands available to be executed in your shell.
+
+Each time you close your shell window, all your env vars will be lost. You will have to execute this two commands again to have freesurfer available.
+
+You can automate this commands in order to be executed everytime you open the tcsh shell.
+
+Edit /home/my_user_name/.tcshrc and add this lines:
+
+```
+setenv FREESURFER_HOME /usr/local/freesurfer
+source $FREESURFER_HOME/SetUpFreeSurfer.csh
+```
+
+Now, everytime you enter to the tcsh shell by typing "tcsh", the freesurfer 
+
+Working Directory
+-
+
+Freesurfer outputs will be placed in the current working directory you choose.
+
+To set the working directory, type:
+
+```
+SUBJECTS_DIR=/home/my_user_name/my_freesurfer_output
+```
+
+No matter where your brain images are. All the files your are working on will be placed in that directory.
+
+TIP: If you always will work in the same directory, add this variable to your .tcshrc start script.
+
