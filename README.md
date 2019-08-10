@@ -35,14 +35,17 @@ Installation of Freesurfer v6.0.0
 
 Freesurfer tar.gz file must be uncompressed and placed in a system directory (/usr/local).
 
+* Install wget to be able to download network files in your machine using the command line tool
 ```
 sudo apt install wget
 ```
 
+* Download the installation file. This may take 2h (4.6GB)
 ```
 wget https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/6.0.0/freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz
 ```
 
+* Unzip and place the freesurfer software in your system.
 ```
 tar -C /usr/local -xzvf freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz
 ```
